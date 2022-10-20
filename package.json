@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",   
     "start": "ts-node dist/app.js",
-    "build": "tsc -p . && ts-node dist/app.js",
+    "build": "tsc -p .",
     "gen": "plop"    
   },
   "devDependencies": {
