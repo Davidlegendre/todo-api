@@ -32,7 +32,7 @@ let User = class User {
                 return yield (0, argon2_1.verify)(this.password, candidatePassword);
             }
             catch (error) {
-                (0, logger_1.default)(error.errors);
+                (0, logger_1.default)(error.errors, true);
                 return false;
             }
         });

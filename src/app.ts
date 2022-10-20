@@ -23,8 +23,8 @@ app.get("/healthcheck", (_, res) => res.sendStatus(200));
 
 const port = localConfig().port
 app.listen(port, () => {
-    log(`server on port http://localhost:${port}`)
-    log('Connecting to DB, please wait')
+    log(`server on port http://localhost:${port}`, false)
+    log('Connecting to DB, please wait', false)
     mongoConnect()
 })
 

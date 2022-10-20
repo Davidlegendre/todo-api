@@ -21,8 +21,8 @@ app.use("/todos", index_routes_1.default);
 app.get("/healthcheck", (_, res) => res.sendStatus(200));
 const port = (0, default_1.default)().port;
 app.listen(port, () => {
-    (0, logger_1.default)(`server on port http://localhost:${port}`);
-    (0, logger_1.default)('Connecting to DB, please wait');
+    (0, logger_1.default)(`server on port http://localhost:${port}`, false);
+    (0, logger_1.default)('Connecting to DB, please wait', false);
     (0, mongo_1.default)();
 });
 exports.default = app;

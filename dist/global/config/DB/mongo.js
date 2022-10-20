@@ -19,7 +19,7 @@ function mongoConnect() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield mongoose_1.default.connect((0, default_1.default)().dbUri);
-            (0, logger_1.default)("Contectado a DB");
+            (0, logger_1.default)("Contectado a DB", false);
         }
         catch (error) {
             process.exit(1);

@@ -4,8 +4,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const dayjs_1 = __importDefault(require("dayjs"));
-const log = (msn) => {
+const log = (msn, isError) => {
     const date = `${(0, dayjs_1.default)().format()}`;
-    console.log(`[${date}] ` + msn);
+    if (!isError)
+        console.log(`[${date}] ` + msn);
+    else
+        console.error(`[${date}] ` + msn);
 };
 exports.default = log;

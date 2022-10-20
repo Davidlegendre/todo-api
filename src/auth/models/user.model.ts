@@ -62,7 +62,7 @@ export class User {
     try {
       return await verify(this.password, candidatePassword);
     } catch (error: any) {
-      log(error.errors);
+      log(error.errors, true);
       return false;
     }
   }
