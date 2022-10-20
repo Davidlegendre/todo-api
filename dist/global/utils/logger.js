@@ -3,17 +3,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const pino_1 = __importDefault(require("pino"));
 const dayjs_1 = __importDefault(require("dayjs"));
-const default_1 = __importDefault(require("../config/default"));
-const log = (0, pino_1.default)({
-    transport: {
-        target: "pino-pretty"
-    },
-    level: (0, default_1.default)().logLevel,
-    base: {
-        pid: false,
-    },
-    timestamp: () => `, "time":"${(0, dayjs_1.default)().format()}"`
-});
+const log = (msn) => {
+    const date = `${(0, dayjs_1.default)().format()}`;
+    console.log(`[${date}] ` + msn);
+};
 exports.default = log;

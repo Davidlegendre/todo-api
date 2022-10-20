@@ -61,8 +61,8 @@ export class User {
   async validatePassword(this: DocumentType<User>, candidatePassword: string) {
     try {
       return await verify(this.password, candidatePassword);
-    } catch (error) {
-      log.error(error, "Password no valido");
+    } catch (error: any) {
+      log(error.errors);
       return false;
     }
   }

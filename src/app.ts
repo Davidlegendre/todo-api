@@ -2,7 +2,6 @@ require("dotenv").config();
 import express from "express";
 import cors from 'cors';
 import mongoConnect from "./global/config/DB/mongo";
-import app from './app'
 import localConfig from "./global/config/default";
 import log from './global/utils/logger';
 
