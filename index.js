@@ -1,7 +1,7 @@
-import mongoConnect from "./dist/global/config/DB/mongo";
-import app from './dist/app'
-import localConfig from "./dist/global/config/default";
-import log from './dist/global/utils/logger';
+import mongoConnect from "./public/global/config/DB/mongo";
+import app from './public/app'
+import localConfig from "./public/global/config/default";
+import log from './public/global/utils/logger';
 const port = localConfig().port
 app.listen(port, () => {
     log(`server on port http://localhost:${port}`, false)
